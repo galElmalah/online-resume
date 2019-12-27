@@ -1,0 +1,25 @@
+@import '../../../sass/_colors.scss';
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  border-top: 3px white solid;
+  li {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    a {
+      color: $linkColor;
+      text-decoration: none;
+      transition: color 200ms linear;
+      &:hover {
+        color: lighten($activeLinkColor,5%);
+      }
+    }
+  }
+}
+
+.activeNavLink {
+  color: $activeLinkColor !important;
+}

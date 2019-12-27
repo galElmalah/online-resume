@@ -1,0 +1,60 @@
+.card {
+  h2 {
+    margin: 0;
+
+  }
+  position: relative;
+  min-height: 100px;
+  width: 90%;
+  padding: 20px 20px;
+  // border: solid 1px rgb(216, 216, 216);
+  border-radius: 8px;
+  // margin-bottom: 15px;
+  // -webkit-box-shadow: 0px 10px 35px -5px rgba(0,0,0,0.24);
+  // -moz-box-shadow: 0px 10px 35px -5px rgba(0,0,0,0.24);
+  box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.24);
+  transition: box-shadow 200ms linear, transform 200ms linear;
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+ 
+    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.18);
+  }
+}
+
+.metaContainer {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+}
+.stars  {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: flex-start;
+  .label {
+    color: white;
+    padding: 4px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    &.javascript {
+      background: #f7df1e;
+      color:black;
+    }
+    &.typescript {
+      background: rgb(10, 75, 214);
+    }
+    &.cpp {
+      background: rgb(165, 42, 42);
+    }
+    &.css {
+      background: rgb(182, 47, 175);
+    }
+  }
+}

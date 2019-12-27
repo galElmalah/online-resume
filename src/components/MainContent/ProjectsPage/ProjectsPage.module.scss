@@ -1,0 +1,6 @@
+@import '../../../sass/_placeholders.scss';
+
+
+.projectPageContainer {
+  @extend %pageLayout;
+}

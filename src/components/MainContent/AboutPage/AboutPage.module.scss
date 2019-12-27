@@ -1,0 +1,5 @@
+
+@import '../../../sass/_placeholders.scss';
+.aboutMeContainer {
+  @extend %pageLayout;
+}
