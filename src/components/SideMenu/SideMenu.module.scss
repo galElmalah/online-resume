@@ -16,11 +16,40 @@
   transition: background 200ms linear, left 200ms ease-in-out;
   box-shadow: 0px 0px 15px -5px black;
 
+  .menu {
+    display: none;
+  }
   @include mobile() {
     width: 200px;
     padding-right: 50px;
     left: -150px;
+    .menu {
+      position: absolute;
+      color: white;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      line-height: 20px;
+      top: 0;
+      right: 0;
+      width: 50px;
+      background: none;
+      opacity: 1;
+      transition: opacity 200ms linear;
+      .letter {
+        margin-top: 10px;
+      }
+      .line {
+        background: white;
+        width: 1px;
+        height: 100px;
+      }
+    }
     &.open {
+      .menu {
+        opacity: 0;
+      }
       left: 0;
     }
   }

@@ -18,12 +18,6 @@ export const MainContent = ({ isOpenMobile }) => {
         [style.night]: isNightMode
       })}
     >
-      <div
-        className={classnames({
-          [style.overlay]: true,
-          [style.open]: isOpenMobile
-        })}
-      />
       <TransitionGroup>
         <CSSTransition key={location.key} classNames={'fade'} timeout={300}>
           <Switch location={location}>

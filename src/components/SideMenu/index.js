@@ -6,6 +6,17 @@ import { NightModeToggle } from './NightModeToggle/index';
 import { ThemeContext } from '../ThemeProvider/index';
 import classnames from 'classnames';
 
+const LineText = ({ word }) => (
+  <div className={style.menu}>
+    <span className={style.line} />
+    {word.split('').map((letter, i) => (
+      <div key={i} className={style.letter}>
+        {letter}
+      </div>
+    ))}
+  </div>
+);
+
 export const SideMenu = ({ isOpenMobile, setIsOpenMobile }) => {
   const [iseNightMode] = React.useContext(ThemeContext);
   const classes = classnames({
@@ -18,6 +29,7 @@ export const SideMenu = ({ isOpenMobile, setIsOpenMobile }) => {
       className={classes}
       onClick={() => setIsOpenMobile(prevState => !prevState)}
     >
+      <LineText word='MENU' />
       <NightModeToggle />
       <SideNavigation />
       <InfoCard />

@@ -7,6 +7,7 @@
   overflow: auto;
   position: relative;
   min-height: 100px;
+
   width: 90%;
   padding: 20px 20px;
   border-radius: 8px;
@@ -58,6 +59,12 @@
   display: flex;
   margin-left: auto;
   flex-direction: column;
+  @include mobile() {
+    position: static;
+    margin-top: 10px;
+    flex-direction: row;
+    margin-left: 0px;
+  }
 }
 .stars {
   display: flex;
@@ -65,11 +72,16 @@
   justify-content: flex-end;
   margin-top: 5px;
   font-weight: bold;
+  @include mobile() {
+    margin-left: 10px;
+    bottom: 2px;
+  }
 }
 
 .titleContainer {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
   .label {
     color: white;
     padding: 4px;
@@ -92,4 +104,8 @@
   position: relative;
   margin-left: 8px;
   bottom: 1.5px;
+  @include mobile() {
+    margin-left: 5px;
+    bottom: 2px;
+  }
 }
