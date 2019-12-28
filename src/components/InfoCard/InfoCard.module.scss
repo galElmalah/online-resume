@@ -1,20 +1,23 @@
-.infoCardContainer {
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: center;
-  margin-top: auto;
-    svg {
+@import '../../sass/_colors.scss';
 
-      width: 25px;
-      fill: white;
-      margin-right: 15px;
-      cursor: pointer;
-      transition: transform 100ms linear;
-      &.email {
-        width:29px;
-      }
-      &:hover {
-        transform: scale(1.1)
-      }
+.infoCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: auto;
+  svg {
+    width: 25px;
+    fill: white;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: transform 100ms linear;
+    &.email {
+      width: 30px;
+      position: relative;
+      top: 3px;
     }
-} 
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

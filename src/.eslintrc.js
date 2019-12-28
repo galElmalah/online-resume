@@ -3,10 +3,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard'
-  ],
+  extends: ['plugin:react/recommended', 'standard'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -18,10 +15,9 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: [
-    'react'
-  ],
+  plugins: ['react'],
   rules: {
-    'react/prop-types':0
+    semi: 0,
+    'react/prop-types': 0
   }
-}
+};

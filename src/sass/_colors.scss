@@ -3,14 +3,17 @@ Here we will define our color schema for the entire website
 there will be a night and light mode
 */
 
+$neonGreen: #1be3af;
+
 $linkColor: white;
 $activeLinkColor: #164155;
-$menuGradient: linear-gradient(141deg, #1be3af, #1ba4e3);
+$menuGradient: linear-gradient(141deg, $neonGreen, #1ba4e3);
 
 $langColors: (
-  "javascript": #f7df1e,
-  "typescript": rgb(10, 75, 214),
-  "cpp": rgb(165, 42, 42),
-  "css": rgb(182, 47, 175));
+  'javascript': #f7df1e,
+  'typescript': rgb(10, 75, 214),
+  'cpp': rgb(226, 58, 17),
+  'css': rgb(182, 47, 175)
+);
 
-$nightBG:#121212;
+$nightBG: rgb(10, 25, 47);

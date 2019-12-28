@@ -10,19 +10,18 @@
     font-weight: bold;
     &.night a {
       &:hover {
-        color: lighten(#1be3af,5%) !important;
-        }
+        color: lighten($neonGreen, 5%) !important;
+      }
     }
     a {
       color: $linkColor;
       text-decoration: none;
       transition: color 200ms linear;
-      
+
       &:hover {
-        color: lighten($activeLinkColor,5%);
+        color: lighten($activeLinkColor, 5%);
       }
 
- 
       &:after {
         content: '';
         display: block;
@@ -34,14 +33,14 @@
         transition: width 400ms ease-in-out;
       }
       &.activeNavLink {
-        color: $activeLinkColor ;
+        color: $activeLinkColor;
         &:hover {
-          color: lighten($activeLinkColor,5%);
+          color: lighten($activeLinkColor, 5%);
         }
         &.night {
           color: #1be3af;
           &:hover {
-            color: lighten(#1be3af,15%);
+            color: lighten(#1be3af, 15%);
           }
         }
         &:after {
@@ -52,8 +51,6 @@
           height: 3px;
         }
       }
-     
     }
   }
 }
-
