@@ -1,7 +1,37 @@
+
+@import '../../sass/_colors.scss';
+
 .contentContainer {
-  width: 100%;
-  padding-top: 25px; 
-  padding-bottom: 25px; 
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 25px calc(5vw - 5px);
   margin: 0 auto;
-  margin-left: 150px
+  margin-left: 150px;
+  transition: background 200ms linear;
+  &.night {
+    background: lighten($nightBG, 3%);
+    color: white
+  }
+}
+:global {
+  .fade-enter {
+
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+  }
+
+  .fade-exit {
+    opacity: 1;
+  }
+
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+
 }

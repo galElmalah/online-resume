@@ -1,0 +1,5 @@
+
+@import '../../../sass/_placeholders.scss';
+.blogContainer {
+  @extend %pageLayout;
+}

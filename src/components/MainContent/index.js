@@ -1,20 +1,35 @@
-import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import * as style from './MainContent.module.scss'
-import { AboutPage } from './AboutPage/index';
-import { ProjectsPage } from './ProjectsPage/index';
-
-const PlaceHolder = ({name}) => <h1>{name}</h1>;
+import { AboutPage } from './AboutPage/index'
+import { ProjectsPage } from './ProjectsPage/index'
+import { ThemeContext } from '../ThemeProvider/index'
+import classnames from 'classnames'
+import {
+  TransitionGroup,
+  CSSTransition
+} from 'react-transition-group'
+import { BlogPage } from './BlogPage/index'
 
 export const MainContent = () => {
-  return(
-  <div className={style.contentContainer}> 
-  <Switch>
-    <Route path="/about" exact component={AboutPage}/>}/>
-    <Route path="/projects" exact component={ProjectsPage}/>
-    <Route path="/blog" exact render={() => <PlaceHolder name={'blog'}/>}/>
-    <Route path="/" exact component={AboutPage}/>}/>
-
-  </Switch>
-  </div>);
-};
+  const location = useLocation()
+  const [isNightMode] = useContext(ThemeContext)
+  return (
+    <div className={classnames({ [style.contentContainer]: true, [style.night]: isNightMode })}>
+      <TransitionGroup>
+        <CSSTransition
+          key={location.key}
+          classNames={'fade'}
+          timeout={300}
+        >
+          <Switch location={location}>
+            <Route path="/about" exact component={AboutPage}/>
+            <Route path="/projects" exact component={ProjectsPage}/>
+            <Route path="/blog" exact component={BlogPage}/>
+            <Route path="/experience" exact component={AboutPage}/>
+            <Route path="/" exact component={AboutPage}/>
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
+    </div>)
+}
