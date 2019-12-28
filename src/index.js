@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { GithubProvider } from './components/GithubProvider/index';
 import { ThemeProvider } from './components/ThemeProvider/index';
 ReactDOM.render(
-  <HashRouter basename={'/online-resume'}>
+  <BrowserRouter basename={'/online-resume'}>
     <GithubProvider>
       <ThemeProvider>
         <App />
       </ThemeProvider>
     </GithubProvider>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
