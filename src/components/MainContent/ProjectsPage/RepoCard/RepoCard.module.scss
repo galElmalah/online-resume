@@ -1,9 +1,10 @@
 @import '../../../../sass/_colors.scss';
-
+@import '../../../../sass/_mixins.scss';
 .card {
   h2 {
     margin: 0;
   }
+  overflow: auto;
   position: relative;
   min-height: 100px;
   width: 90%;

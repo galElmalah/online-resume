@@ -5,7 +5,6 @@ import { RepoCard } from './RepoCard/index';
 
 export const ProjectsPage = () => {
   const { repos, fetching } = React.useContext(GithubContext);
-  console.log(fetching);
   return (
     <div className={style.projectPageContainer}>
       <h1>Projects</h1>

@@ -1,12 +1,18 @@
 @import '../../sass/_colors.scss';
-
+@import '../../sass/_mixins.scss';
 .contentContainer {
   box-sizing: border-box;
   overflow: hidden;
-  padding: 25px calc(5vw - 5px);
+  padding: 25px calc(5vw - 1vmin);
   margin: 0 auto;
-  margin-left: 150px;
+  margin-left: 170px;
   transition: background 200ms linear;
+
+  @include mobile() {
+    padding: 35px 3vw;
+    margin-left: 50px;
+  }
+
   mark {
     background: none;
     font-weight: bolder;
@@ -37,5 +43,22 @@
   .fade-exit-active {
     opacity: 0;
     transition: opacity 200ms;
+  }
+}
+
+.overlay {
+  display: none;
+  @include mobile() {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: $neonGreen;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    &.open {
+      display: block;
+    }
   }
 }
