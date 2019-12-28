@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/online-resume/static/css/main.7623bb36.chunk.css",
+    "main.js": "/online-resume/static/js/main.b660ec1b.chunk.js",
+    "main.js.map": "/online-resume/static/js/main.b660ec1b.chunk.js.map",
+    "runtime-main.js": "/online-resume/static/js/runtime-main.ba5ab48c.js",
+    "runtime-main.js.map": "/online-resume/static/js/runtime-main.ba5ab48c.js.map",
+    "static/js/2.1950cfe1.chunk.js": "/online-resume/static/js/2.1950cfe1.chunk.js",
+    "static/js/2.1950cfe1.chunk.js.map": "/online-resume/static/js/2.1950cfe1.chunk.js.map",
+    "index.html": "/online-resume/index.html",
+    "precache-manifest.4550356c24051a8b665622c3602bb61e.js": "/online-resume/precache-manifest.4550356c24051a8b665622c3602bb61e.js",
+    "service-worker.js": "/online-resume/service-worker.js",
+    "static/css/main.7623bb36.chunk.css.map": "/online-resume/static/css/main.7623bb36.chunk.css.map",
+    "static/js/2.1950cfe1.chunk.js.LICENSE": "/online-resume/static/js/2.1950cfe1.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ba5ab48c.js",
+    "static/js/2.1950cfe1.chunk.js",
+    "static/css/main.7623bb36.chunk.css",
+    "static/js/main.b660ec1b.chunk.js"
+  ]
+}
