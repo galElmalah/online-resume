@@ -7,6 +7,7 @@ import { ThemeContext } from '../ThemeProvider/index';
 import classnames from 'classnames';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { BlogPage } from './BlogPage/index';
+import { WorkExperiencePage } from './WorkExperiencePage/index';
 
 export const MainContent = ({ isOpenMobile }) => {
   const location = useLocation();
@@ -24,7 +25,7 @@ export const MainContent = ({ isOpenMobile }) => {
             <Route path='/about' exact component={AboutPage} />
             <Route path='/projects' exact component={ProjectsPage} />
             <Route path='/blog' exact component={BlogPage} />
-            <Route path='/experience' exact component={AboutPage} />
+            <Route path='/experience' exact component={WorkExperiencePage} />
             <Route path='/' exact component={AboutPage} />
           </Switch>
         </CSSTransition>

@@ -1,8 +1,8 @@
-@import '../../sass/_colors.scss';
-@import '../../sass/_mixins.scss';
+@import "../../sass/_colors.scss";
+@import "../../sass/_mixins.scss";
 
 .sideMenu {
-  z-index: 1;
+  z-index: 5;
   position: fixed;
   width: 170px;
   display: flex;
