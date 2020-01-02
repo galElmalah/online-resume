@@ -1,11 +1,18 @@
 @import "../../../sass/_placeholders.scss";
 @import "../../../sass/_colors.scss";
+@import "../../../sass/_mixins.scss";
 
 .WorkExperiencePageContainer {
   @extend %pageLayout;
 }
 
 .jobCard {
+  img {
+    width: 140px;
+    height: 140px;
+  }
+  align-items: center;
+  display: flex;
   padding: 20px;
   background: white;
   border-radius: 8px;
@@ -16,20 +23,15 @@
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
-  .description {
-    &::after {
-      content: "";
-      transition: opacity 400ms linear;
-      display: block;
-      height: 100px;
-      position: absolute;
-      top: calc(50% - 50px);
-      background: pink;
-      right: 5px;
-      width: 10px;
-      font-size: 20px;
-      line-height: 28px;
+  &.night {
+    background: $nightBG;
+    .description {
+      box-shadow: 0px 0px 15px -5px $niceBlue;
+      background: darken($niceBlue, 30%);
     }
+  }
+  .description {
+    overflow-y: auto;
     p {
       margin: 0;
     }
@@ -45,12 +47,23 @@
     width: 100%;
     padding: 20px;
     padding-right: 10%;
-    background: $menuGradient;
+    background: #19bbcf;
     height: 100%;
     transform: translateX(-90%);
     transition: transform 400ms ease-in-out;
     &:hover {
       transform: translateX(0);
     }
+  }
+  @include mobile() {
+    width: 100%;
+    flex-direction: column;
+    img {
+      display: none;
+    }
+  }
+
+  .details {
+    flex-grow: 1;
   }
 }

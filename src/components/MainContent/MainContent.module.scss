@@ -1,5 +1,5 @@
-@import '../../sass/_colors.scss';
-@import '../../sass/_mixins.scss';
+@import "../../sass/_colors.scss";
+@import "../../sass/_mixins.scss";
 .contentContainer {
   box-sizing: border-box;
   overflow: hidden;
@@ -25,6 +25,7 @@
     }
   }
 }
+
 :global {
   .fade-enter {
     opacity: 0;
@@ -33,7 +34,7 @@
 
   .fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 250ms ease-in;
+    transition: opacity 300ms ease-in;
   }
 
   .fade-exit {
@@ -42,23 +43,6 @@
 
   .fade-exit-active {
     opacity: 0;
-    transition: opacity 200ms;
-  }
-}
-
-.overlay {
-  display: none;
-  @include mobile() {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: $neonGreen;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
-    &.open {
-      display: block;
-    }
+    transition: opacity 300ms;
   }
 }
